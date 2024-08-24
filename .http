@@ -1,0 +1,23 @@
+### Register a new account
+POST http://localhost:3030/api/register
+Content-Type: application/json
+
+{
+  "fullname": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
+
+### Confirm the account with the received code
+POST http://localhost:3030/api/confirm
+Content-Type: application/json
+
+{
+  "email": "johndoe@example.com",
+  "code": "R651WB"
+}
+
+
+### Get account information
+GET http://localhost:3030/api/account
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzI0NTAyMzAyLCJleHAiOjE3MjQ1MDU5MDJ9.H6RT0aINC1HabziZgTVYJEuZsPOQRvMIhDRKvPzSrTA
